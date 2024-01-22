@@ -11,7 +11,7 @@ export default function Header() {
    const navigate = useNavigate(); 
  
     // Assign api_url for deplyoment
-    const API_URL = 'http://localhost:5000';
+    const API_URL =  process.env.URL;
 
    // Extract userName from userInfo, if it exists
    const userName = userInfo?.userName;
