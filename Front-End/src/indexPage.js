@@ -16,7 +16,7 @@ export default function IndexPage(){
  const [data, setData] = useState(null);
 
  // Assign api_url for deplyoment
- const API_URL = 'http://localhost:5000';
+ const API_URL =  process.env.URL;
 
  // useEffect to fetch user profile data when the component mounts or setUserInfo changes
  useEffect(() => {
