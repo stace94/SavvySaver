@@ -16,7 +16,7 @@ export default function BudgetPage() {
   const userName = userInfo?.userName || '';
 
   // Assign api_url for deplyoment
-  const API_URL = 'http://localhost:5000';
+  const API_URL =  process.env.URL;
 
   // useEffect hook to fetch budget data when the component mounts or userName changes
   useEffect(() => {
