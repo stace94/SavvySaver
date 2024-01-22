@@ -17,7 +17,7 @@ export default function IndexPage(){
 
  // Assign api_url for deplyoment
  const API_URL =  process.env.URL;
-
+ console.log(API_URL);
  // useEffect to fetch user profile data when the component mounts or setUserInfo changes
  useEffect(() => {
    fetch(`${API_URL}/profile`, {
