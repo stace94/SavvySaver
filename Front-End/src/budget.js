@@ -25,7 +25,7 @@ const Budget = () => {
 
 
  // Assign api_url for deplyoment
- const API_URL = 'http://localhost:5000';
+ const API_URL =  process.env.URL;
  
   // Context for accessing and updating user information
   const { setUserInfo, userInfo } = useContext(UserContext);
