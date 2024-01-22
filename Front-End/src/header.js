@@ -15,7 +15,16 @@ export default function Header() {
 
    // Extract userName from userInfo, if it exists
    const userName = userInfo?.userName;
- 
+    useEffect(() => {
+    fetch(`${API_URL}/profile`, {
+      credentials: "include",
+    }).then((response) => {
+      response.json().then((userInfo) => {
+        setUserInfo(userInfo); // Update user information in the context
+      });
+    });
+  }, [setUserInfo]);
+   
    // Async function to handle user logout
    async function logout() {
      await fetch(`${API_URL}/logout`, {
