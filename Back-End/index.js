@@ -15,7 +15,7 @@ require('dotenv').config();
 
 const secret = process.env.SECRET_KEY;
 const DB_URL = process.env.DB_URL;
-const url = process.env.URL;
+const url = process.env.WEB_URL;
 
  
 // Middleware to parse JSON data
