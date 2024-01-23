@@ -16,7 +16,7 @@ export default function LoginPage() {
   const { setUserInfo } = useContext(UserContext);
 
   // Assign api_url for deplyoment
-   const API_URL =  process.env.URL;
+ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
 
   // Function to handle the login process
   async function login(e) {
