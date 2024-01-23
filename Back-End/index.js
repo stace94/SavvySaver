@@ -75,7 +75,6 @@ app.post("/login", async (req, res) => {
 // Route to get user profile information
 app.get('/profile', async (req, res) => {
   const { token } = req.cookies;
- console.log(token)
   try {
     // Verify the JWT token
     const info = jwt.verify(token, secret);
