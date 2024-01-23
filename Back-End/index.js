@@ -57,7 +57,11 @@ app.post("/login", async (req, res) => {
     // Generate a JWT token and set it as a cookie
     jwt.sign({ userName, id: userDoc._id }, secret, {}, (err, token) => {
       if (err) throw err;
-      res.cookie('token', token).json({
+      res.cookie('token', token,{
+       httpOnly: true,
+       secure: true,
+       sameSite: 'none'
+      }).json({
         id: userDoc._id,
         userName,
       }); 
