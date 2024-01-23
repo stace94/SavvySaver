@@ -19,6 +19,7 @@ export default function IndexPage(){
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
  // useEffect to fetch user profile data when the component mounts or setUserInfo changes
  useEffect(() => {
+  if (userName){
    fetch(`${API_URL}/profile`, {
      credentials: "include",
    }).then((response) => {
@@ -26,10 +27,12 @@ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
        setUserInfo(userInfo); // Update user information in the context
      });
    });
- }, [setUserInfo]); // Dependency array with setUserInfo to re-run the effect if setUserInfo changes
+  }
+ },[userName, setUserInfo]); 
 
  // Function to fetch budget data
  const fetchData = async () => {
+  if (userName){
    try {
      // Fetch request to the budget endpoint using the userName
      const response = await fetch(`${API_URL}/budget/${userName}`);
@@ -40,6 +43,7 @@ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
      // Log any errors that occur during the fetch
      console.error("Error fetching data:", error.message);
    }
+  }
  };
 
  // useEffect to fetch budget data when the component mounts or userName changes
