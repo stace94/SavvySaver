@@ -24,7 +24,7 @@ const ExpenseList = () => {
   const [showPurchasePopup, setShowPurchasePopup] = useState(false); // Flag to show/hide purchase popup
 
  // Assign api_url for deplyoment
- const API_URL =  process.env.API_URL;
+ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
 
   // Context for user information
   const { userInfo } = useContext(UserContext);
