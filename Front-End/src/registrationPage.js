@@ -12,7 +12,7 @@ export default function RegisterPage() {
   const [error, setError] = useState(null);
 
     // Assign api_url for deplyoment
-    const API_URL =  process.env.URL;
+    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
     
   // Async function to handle the registration process
   async function register(e) {
