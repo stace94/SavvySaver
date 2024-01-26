@@ -96,7 +96,7 @@ export default function BudgetPage() {
       <div className="flex flex-col items-center space-y-8">
         {/* Section displaying monthly income streams */}
         <div className="flex flex-col items-center border-2 border-white p-8 w-96 bg-green-800">
-          <h2 className="text-2xl font-bold border-b">Monthly Income Streams</h2>
+          <h2 className="text-2xl font-bold border-b">Monthly Income Sources</h2>
           <ul className="text-center">
             {/* Mapping over incomes to list each income stream */}
             {incomes.map((incomeItem, index) => (
