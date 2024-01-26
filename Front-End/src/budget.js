@@ -148,7 +148,7 @@ const Budget = () => {
 
     {/* Input field for Income Stream */}
     <div className="flex flex-col mb-6 space-y-4 items-center">
-      <label className="text-lg">Income Stream</label>
+      <label className="text-lg">Income Source</label>
       <input 
         className="mb-2 p-2 border text-black" 
         type="text" 
